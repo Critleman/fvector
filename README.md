@@ -1,4 +1,4 @@
-how to use:
+how to use:<br/>
 use vcreate() to create a vector<br/>
 use vpush() to append value<br/>
 use vget() to get value with the specified index<br/>
