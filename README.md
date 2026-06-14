@@ -8,4 +8,4 @@ use vfree() to free the vector.data heap allocation<br/><br/>
 example is in the test.c file<br/>
 <br/>
 to compile and link:<br/>
-clang <your c input> vector.c -o <your c output>
+clang \<your c input\> vector.c -o \<your c output\>
