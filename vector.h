@@ -13,4 +13,6 @@ Vector vcreate(size_t datatype);
 void vpush(Vector *vector, void *value);
 void vpop(Vector *vector);
 void vfree(Vector *vector);
+void vreset(Vector *vector);
+void vfreeElement(Vector *vector);
 uint8_t *vget(Vector *vector, size_t index);

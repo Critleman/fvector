@@ -35,12 +35,21 @@ void vpop(Vector *vector) {
   }
 }
 
+void vreset(Vector *vector) {
+  vector->length = 0;
+}
 void vfree(Vector *vector) {
   free(vector->data);
   vector->data = NULL;
   vector->datatype = 0;
   vector->length = 0;
   vector->size = 0;
+}
+
+void vfreeElement(Vector *vector) {
+  for (size_t i = 0; i < vector->length; i++) {
+    free(vget(vector, i));
+  }
 }
 
 uint8_t *vget(Vector *vector, size_t index) {
