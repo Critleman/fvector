@@ -48,7 +48,7 @@ void vfree(Vector *vector) {
 
 void vfreeElement(Vector *vector) {
   for (size_t i = 0; i < vector->length; i++) {
-    free(vget(vector, i));
+    free(*(void**)vget(vector, i));
   }
 }
 
