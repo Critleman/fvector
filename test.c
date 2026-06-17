@@ -25,9 +25,9 @@ int main() {
 
   }
   printf("n\n");
-  vreset(&ints); // set length to 0
-  int nn = 99;
-  vpush(&ints, &nn); // 99 should be in the first index
+//  vreset(&ints); // set length to 0
+//  int nn = 99;
+//  vpush(&ints, &nn); // 99 should be in the first index
   for (int i = 15; i >= 0; i--) {
     printf("\nindex: %i\n", i);
     
@@ -37,6 +37,7 @@ int main() {
     printf("char: %c | %lu | %zu | %zu\n", *(char*)vget(&chars, i), chars.length, chars.size, chars.datatype);
     vpop(&chars);
 
+//    vfreeElement free all of the heap pointer inside the specified vector
 //    when code below is uncommented, the output will give segfault
 //    vfreeElement(&strs);
     char *istr = *(char**)vget(&strs, i);
